@@ -1,12 +1,12 @@
 import "./App.css";
-import Nav from "./layout/Nav";
 import Contain from "./layout/Contain";
+import Hearder from "./layout/Hearder";
 import Footter from "./layout/Footer";
 
 function App() {
   return (
     <>
-      <Nav />
+      <Hearder />
       <Contain />
       <Footter />
     </>

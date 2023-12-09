@@ -9,7 +9,7 @@ const Nav = () => {
       >
         <div className="container">
           <a className="navbar-brand" href="index.html">
-            Furni<span>.</span>
+            ShineBright<span>.</span>
           </a>
 
           <button
