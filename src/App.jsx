@@ -1,13 +1,16 @@
-import './App.css'
+import "./App.css";
+import Nav from "./layout/Nav";
+import Contain from "./layout/Contain";
+import Footter from "./layout/Footer";
 
 function App() {
-
-
   return (
     <>
-      <h1>hello</h1>
+      <Nav />
+      <Contain />
+      <Footter />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
