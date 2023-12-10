@@ -1,15 +1,20 @@
 import "./App.css";
-import Contain from "./layout/Contain";
-import Hearder from "./layout/Hearder";
-import Footter from "./layout/Footer";
+import Header from "./layout/Hearder";
+import Footer from "./layout/Footer";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ShopList from "./component/ShopList";
+import Cart from "./component/Cart";
 
 function App() {
   return (
-    <>
-      <Hearder />
-      <Contain />
-      <Footter />
-    </>
+<Router>
+      <Header/>
+      <Routes>
+        <Route path="/" element={<ShopList />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 

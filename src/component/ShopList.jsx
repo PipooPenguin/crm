@@ -7,15 +7,12 @@ const ShopList = () => {
   useEffect(() => {
     const callAxios = async () => {
       try {
-        const token = "t-g206ca3OZ2YDZL3APCR5VMZ53MIECFMINMICVGSJ";
-        axios.defaults.headers.common = {
-          Authorization: `Bearer ${token}`,
-        };
         const url =
-          "https://open.larksuite.com/open-apis/bitable/v1/apps/VuOJbA1FhaF1oGsIi3IlFmDsgad/tables/tblcVRE6mcPTnTVS/records";
-        const data = await axios.get(url);
-        console.log("ShopList.jsx useEffect data: ", data.data.items);
-        // setShop(data.data);
+          "http://localhost:5000/listrecord";
+        const {data} = await axios.get(url);
+        const dataUpdate = data.map((item)=>item.fields);
+        console.log("ShopList.jsx useEffect dataUpdate: ", dataUpdate);
+        setShop(dataUpdate);
       } catch (error) {
         console.log("ShopList.jsx useEffect error");
       }
@@ -30,7 +27,7 @@ const ShopList = () => {
             <div className="col-12 col-md-4 col-lg-3 mb-5" key={item.id}>
               <a className="product-item" href="#">
                 <img
-                  src={item.img_url}
+                  src={item.img_url.link}
                   className="img-fluid product-thumbnail"
                 />
                 <h3 className="product-title">{item.name}</h3>
