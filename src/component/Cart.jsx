@@ -1,12 +1,15 @@
 import React from "react";
 import { useContext } from "react";
 import { ShopContext } from "../context/ShopContext";
+import { useNavigate } from "react-router-dom";
+
 
 const Cart = () => {
-  const {removeFromCart,filteredProducts } = useContext(ShopContext);
+  const {removeFromCart,filteredProducts,getTotalCartAmount } = useContext(ShopContext);
   const handleSubmit = () => {
     console.log("handle submit");
   };
+  const navigate = useNavigate();
   return (
     <div className="untree_co-section before-footer-section">
       <div className="container">
@@ -57,15 +60,11 @@ const Cart = () => {
         <div className="row">
           <div className="col-md-6">
             <div className="row mb-5">
-              <div className="col-md-6 mb-3 mb-md-0">
-                <button className="btn btn-black btn-sm btn-block">
-                  Update Cart
-                </button>
-              </div>
               <div className="col-md-6">
-                <button className="btn btn-outline-black btn-sm btn-block">
+                <button className="btn btn-outline-black btn-sm btn-block" onClick={()=>{navigate("/")}}>
                   Continue Shopping
                 </button>
+                
               </div>
             </div>
             <div className="row">
@@ -103,7 +102,7 @@ const Cart = () => {
                     <span className="text-black">Subtotal</span>
                   </div>
                   <div className="col-md-6 text-right">
-                    <strong className="text-black">$230.00</strong>
+                    <strong className="text-black">{getTotalCartAmount()} đ</strong>
                   </div>
                 </div>
                 <div className="row mb-5">
@@ -111,7 +110,7 @@ const Cart = () => {
                     <span className="text-black">Total</span>
                   </div>
                   <div className="col-md-6 text-right">
-                    <strong className="text-black">$230.00</strong>
+                    <strong className="text-black">{getTotalCartAmount()} đ</strong>
                   </div>
                 </div>
 
@@ -119,7 +118,7 @@ const Cart = () => {
                   <div className="col-md-12">
                     <button
                       className="btn btn-black btn-lg py-3 btn-block"
-                      // onclick="window.location='checkout.html'"
+                      onClick={()=>{navigate("/checkout")}}
                     >
                       Proceed To Checkout
                     </button>

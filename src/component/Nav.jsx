@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
 const Nav = () => {
+  const navigate = useNavigate();
   return (
     <>
       <nav
@@ -9,9 +10,10 @@ const Nav = () => {
         arial-label="Furni navigation bar"
       >
         <div className="container">
-          <a className="navbar-brand" href="index.html">
+          
+          <Link to="/" className="navbar-brand">
             ShineBright<span>.</span>
-          </a>
+            </Link>
 
           <button
             className="navbar-toggler"
@@ -27,11 +29,11 @@ const Nav = () => {
 
           <div className="collapse navbar-collapse" id="navbarsFurni">
             <ul className="custom-navbar-nav navbar-nav m-auto mb-2 mb-md-0">
-              <li className="nav-item ">
+              {/* <li className="nav-item ">
                 <a className="nav-link" href="index.html">
                   Home
                 </a>
-              </li>
+              </li> */}
 
               <li className="active">
                 <Link to="/" className="nav-link">

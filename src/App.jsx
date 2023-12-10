@@ -4,6 +4,7 @@ import Footer from "./layout/Footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ShopList from "./component/ShopList";
 import Cart from "./component/Cart";
+import Checkout from "./component/Checkout";
 import { ShopContextProvider } from "./context/ShopContext";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<ShopList />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
         <Footer />
       </Router>

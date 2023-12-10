@@ -28,19 +28,18 @@ export const ShopContextProvider = (props) => {
     callAxios();
   }, []);
 
-  //   const [cartItems, setCartItems] = useState(getDefaultCart(PRODUCTS));
   const [cartItems, setCartItems] = useState({});
   const [filteredProducts,setFilterProducts] = useState([]);
-  //   const getTotalCartAmount = () => {
-  //     let totalAmount = 0;
-  //     for (const item in cartItems) {
-  //       if (cartItems[item] > 0) {
-  //         let itemInfo = PRODUCTS.find((product) => product.id === Number(item));
-  //         totalAmount += cartItems[item] * itemInfo.price;
-  //       }
-  //     }
-  //     return totalAmount;
-  //   };
+  const getTotalCartAmount = () => {
+    let totalAmount = 0;
+    for (const key in cartItems) {
+      const itemInfo = PRODUCTS.find((product) => product.id == key);
+      totalAmount += Number(itemInfo.price);
+      // Move the console.log statement inside the loop
+      console.log("ShopContext.jsx getTotalCartAmount totalAmount: ", itemInfo);
+    }
+    return totalAmount;
+  };
 
   useEffect(() => {
     const newFilter = PRODUCTS.filter(
@@ -72,7 +71,7 @@ export const ShopContextProvider = (props) => {
     addToCart,
     // updateCartItemCount,
     removeFromCart,
-    // getTotalCartAmount,
+    getTotalCartAmount,
     // checkout,
     PRODUCTS,
     filteredProducts,
