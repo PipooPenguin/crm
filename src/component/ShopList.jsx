@@ -5,9 +5,9 @@ import { useContext } from "react";
 import { ShopContext } from "../context/ShopContext";
 
 const ShopList = () => {
-  const {PRODUCTS,addToCart,cartItems} = useContext(ShopContext) ;
+  const { PRODUCTS, addToCart, cartItems } = useContext(ShopContext);
   const hanleAddToCart = (itemID) => {
-    console.log("ShopList.jsx hanleAddToCart cartItems before:",cartItems);
+    console.log("ShopList.jsx hanleAddToCart cartItems before:", cartItems);
     addToCart(itemID);
   };
   return (
@@ -23,13 +23,28 @@ const ShopList = () => {
                 />
                 <h3 className="product-title">{item.name}</h3>
                 <strong className="product-price">{item.price}đ</strong>
-
-                <span className="icon-cross" onClick={()=>hanleAddToCart(item.id)}>
-                  <img
-                    src="src/assets/images/cross.svg"
-                    className="img-fluid"
-                  />
-                </span>
+                {cartItems[item.id] == 1 ? (
+                    <span
+                      className="icon-cross"
+                      onClick={() => hanleAddToCart(item.id)}
+                    >
+                      <img
+                        src="src/assets/images/tick.svg"
+                        className="img-fluid"
+                      />
+                    </span>
+                  ) : (
+                    <span
+                      className="icon-cross"
+                      onClick={() => hanleAddToCart(item.id)}
+                    >
+                      <img
+                        src="src/assets/images/cross.svg"
+                        className="img-fluid"
+                      />
+                    </span>
+                  )
+                }
               </a>
             </div>
           ))}
