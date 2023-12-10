@@ -1,8 +1,11 @@
 import React from 'react'
+import ShopList from '../component/ShopList'
 
 const Contain = () => {
   return (
-    <div>Contain</div>
+    <>
+      <ShopList/>
+    </>
   )
 }
 
