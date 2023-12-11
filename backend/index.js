@@ -1,13 +1,15 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const axios = require("axios")
+const axios = require("axios");
+var cors = require('cors');
 
 const methodOverride = require("method-override");
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride("_method"));
+app.use(cors())
 
 const getToken = async (req,res,next) => {
     const url = "https://open.larksuite.com/open-apis/auth/v3/app_access_token/internal";
