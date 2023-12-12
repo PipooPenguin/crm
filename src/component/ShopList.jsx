@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useContext } from "react";
 import { ShopContext } from "../context/ShopContext";
 
+
 const ShopList = () => {
   const { PRODUCTS, addToCart, cartItems } = useContext(ShopContext);
   const hanleAddToCart = (itemID) => {
@@ -29,7 +30,7 @@ const ShopList = () => {
                       onClick={() => hanleAddToCart(item.id)}
                     >
                       <img
-                        src="assets/images/tick.svg"
+                        src="src/assets/images/tick.svg"
                         className="img-fluid"
                       />
                     </span>
@@ -39,7 +40,7 @@ const ShopList = () => {
                       onClick={() => hanleAddToCart(item.id)}
                     >
                       <img
-                        src="assets/images/cross.svg"
+                        src="src/assets/images/cross.svg"
                         className="img-fluid"
                       />
                     </span>

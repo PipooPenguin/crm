@@ -1,12 +1,12 @@
 import React from 'react'
-
+import Romand from "./src/assets/images/Romand.png";
 const Footer = () => {
   return (
     <footer className="footer-section">
     <div className="container relative">
 
       <div className="sofa-img">
-        <img src="src/assets/images/Romand.png" alt="Image" className="img-fluid"/>
+          <img src={ Romand} alt="Image" className="img-fluid"/>
       </div>
 
 
