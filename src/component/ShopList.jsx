@@ -3,7 +3,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useContext } from "react";
 import { ShopContext } from "../context/ShopContext";
-
+import cross from "../assets/images/cross.svg";
+import tick from "../assets/images/tick.svg"
 
 const ShopList = () => {
   const { PRODUCTS, addToCart, cartItems } = useContext(ShopContext);
@@ -30,7 +31,7 @@ const ShopList = () => {
                       onClick={() => hanleAddToCart(item.id)}
                     >
                       <img
-                        src="../assets/images/tick.svg"
+                        src={tick}
                         className="img-fluid"
                       />
                     </span>
@@ -40,7 +41,7 @@ const ShopList = () => {
                       onClick={() => hanleAddToCart(item.id)}
                     >
                       <img
-                        src="../assets/images/cross.svg"
+                        src={cross}
                         className="img-fluid"
                       />
                     </span>
