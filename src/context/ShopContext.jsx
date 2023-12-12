@@ -16,7 +16,7 @@ export const ShopContextProvider = (props) => {
   useEffect(() => {
     const callAxios = async () => {
       try {
-        const url = "http://localhost:5000/listrecord";
+        const url = "https://test-drib.onrender.com/listrecord";
         const { data } = await axios.get(url);
         const dataUpdate = data.map((item) => item.fields);
         console.log("ShopContext.jsx useEffect dataUpdate: ", dataUpdate);

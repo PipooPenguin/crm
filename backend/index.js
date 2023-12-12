@@ -18,7 +18,7 @@ const getToken = async (req,res,next) => {
         "app_secret": "hpGFs4IXnGwG4aHlCjkP3eAR2AJK5CfI"
     }
     const response = await axios.post(url,post);
-    // console.log("getToken response: ", response.data.app_access_token);
+     console.log("getToken response: ", response.data.app_access_token);
     req.token = response.data.app_access_token;
     next();
 }
