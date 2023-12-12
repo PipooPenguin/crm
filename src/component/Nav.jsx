@@ -1,5 +1,6 @@
 import React from "react";
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import cart from "../assets/images/cart.svg";
 
 const Nav = () => {
   const navigate = useNavigate();
