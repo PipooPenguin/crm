@@ -1,5 +1,5 @@
 import React from 'react'
-import Romand from "./src/assets/images/Romand.png";
+import Romand from "src/assets/images/Romand.png";
 const Footer = () => {
   return (
     <footer className="footer-section">
