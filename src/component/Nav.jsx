@@ -46,7 +46,7 @@ const Nav = () => {
             <ul className="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
               <li>
                 <Link to="/cart" className="nav-link">
-                  <img src="src/assets/images/cart.svg" />
+                  <img src={ cart} />
                 </Link>
               </li>
             </ul>
