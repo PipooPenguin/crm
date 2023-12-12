@@ -29,7 +29,7 @@ const ShopList = () => {
                       onClick={() => hanleAddToCart(item.id)}
                     >
                       <img
-                        src="src/assets/images/tick.svg"
+                        src="assets/images/tick.svg"
                         className="img-fluid"
                       />
                     </span>
@@ -39,7 +39,7 @@ const ShopList = () => {
                       onClick={() => hanleAddToCart(item.id)}
                     >
                       <img
-                        src="src/assets/images/cross.svg"
+                        src="assets/images/cross.svg"
                         className="img-fluid"
                       />
                     </span>
