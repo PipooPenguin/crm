@@ -11,10 +11,9 @@ const Nav = () => {
         arial-label="Furni navigation bar"
       >
         <div className="container">
-          
           <Link to="/" className="navbar-brand">
             ShineBright<span>.</span>
-            </Link>
+          </Link>
 
           <button
             className="navbar-toggler"
@@ -46,7 +45,12 @@ const Nav = () => {
             <ul className="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
               <li>
                 <Link to="/cart" className="nav-link">
-                  <img src={ cart} />
+                  <img src={cart} />
+                </Link>
+              </li>
+              <li>
+                <Link to="/ladipage" className="nav-link">
+                  ladipage
                 </Link>
               </li>
             </ul>
