@@ -6,6 +6,7 @@ import ShopList from "./component/ShopList";
 import Cart from "./component/Cart";
 import Checkout from "./component/Checkout";
 import { ShopContextProvider } from "./context/ShopContext";
+import Ladipage from "./component/Ladipage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<ShopList />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path='/ladipage' element={<Ladipage/>} />
         </Routes>
         <Footer />
       </Router>

@@ -1,5 +1,6 @@
 import React from "react";
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import cart from "../assets/images/cart.svg";
 
 const Nav = () => {
   const navigate = useNavigate();
@@ -10,10 +11,9 @@ const Nav = () => {
         arial-label="Furni navigation bar"
       >
         <div className="container">
-          
           <Link to="/" className="navbar-brand">
             ShineBright<span>.</span>
-            </Link>
+          </Link>
 
           <button
             className="navbar-toggler"
@@ -40,12 +40,17 @@ const Nav = () => {
                   Shop
                 </Link>
               </li>
+              <li>
+                <Link to="/ladipage" className="nav-link">
+                  Ladipage
+                </Link>
+              </li>
             </ul>
 
             <ul className="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
               <li>
                 <Link to="/cart" className="nav-link">
-                  <img src="src/assets/images/cart.svg" />
+                  <img src={cart} />
                 </Link>
               </li>
             </ul>
