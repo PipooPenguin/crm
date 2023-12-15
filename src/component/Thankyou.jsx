@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { BsCardChecklist } from "react-icons/bs";
 
-const Thankyou = () => {
+const ThankYou = () => {
   const location = useLocation();
   const navigate = useNavigate();
   return (
@@ -56,4 +56,4 @@ const Thankyou = () => {
   );
 };
 
-export default Thankyou;
+export default ThankYou;

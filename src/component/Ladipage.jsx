@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
-import Thankyou from "./ThankYou";
+import ThankYou from "./ThankYou";
 
 
 const Ladipage = () => {
@@ -33,7 +33,7 @@ const Ladipage = () => {
   return (
     <>
       {success ? (
-        <Thankyou />
+        <ThankYou />
       ) : (
         <div
           className="container"
