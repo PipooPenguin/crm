@@ -24,7 +24,7 @@ const Ladipage = () => {
     console.log('handle')
     event.preventDefault();
     try {
-      const url = "http://localhost:5000/lead";
+      const url = "https://test-drib.onrender.com/lead";
       const res = await axios.post(url, user);
       setSuccess(true);
       console.log(res)
