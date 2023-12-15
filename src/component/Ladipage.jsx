@@ -8,7 +8,7 @@ const Ladipage = () => {
   const [success, setSuccess] = useState(false);
   const [user, setuser] = useState({
     "Giới tính": "",
-    "Họ tên": "",
+    "Họ và tên": "",
     "Tỉnh thành": "",
     "email": "",
     "số điện thoại": "",
@@ -21,11 +21,13 @@ const Ladipage = () => {
     console.log(user);
   };
   const handleSubmit = async (event) => {
+    console.log('handle')
     event.preventDefault();
     try {
-      // const url = "";
-      // const res = await axios.post(url, user);
+      const url = "http://localhost:5000/lead";
+      const res = await axios.post(url, user);
       setSuccess(true);
+      console.log(res)
     } catch (error) {
       console.log(error);
     }
@@ -52,7 +54,7 @@ const Ladipage = () => {
                       type="text"
                       className="form-control"
                       id="c_fname"
-                      name="Họ tên"
+                      name="Họ và tên"
                       placeholder="Họ và tên"
                       onChange={handleChange}
                     />
@@ -67,7 +69,7 @@ const Ladipage = () => {
                       type="text"
                       className="form-control"
                       id="c_address"
-                      name="c_address"
+                      name="Tỉnh thành"
                       placeholder="Tỉnh thành"
                       onChange={handleChange}
                     />
@@ -96,7 +98,7 @@ const Ladipage = () => {
                       type="text"
                       className="form-control"
                       id="c_phone"
-                      name="c_phone"
+                      name="số điện thoại"
                       placeholder="Số điện thoại"
                       onChange={handleChange}
                     />
