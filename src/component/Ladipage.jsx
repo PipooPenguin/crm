@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
-import Thankyou from "./Thankyou";
+import Thankyou from "./ThankYou";
+
 
 const Ladipage = () => {
   const [success, setSuccess] = useState(false);
